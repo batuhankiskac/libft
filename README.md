@@ -1,17 +1,60 @@
-Libft is a project that recreates essential standard library functions for the C programming language. This project includes commonly used functions for handling string, memory, and linked list operations, as well as other utility functions. The libft library aims to simplify data processing and list management in C.
+Here’s an English GitHub description for your `libft` project, formatted as a `README.md` file:
 
-Features
-This project includes the following function groups:
+---
 
-1. String Functions:
-Functions like ft_strlen, ft_strchr, ft_strrchr, ft_strdup, ft_strjoin, and ft_strtrim simplify text processing.
-You can split or concatenate strings using functions like ft_split, ft_strlcpy, and ft_strlcat.
-2. Memory Functions:
-Memory functions like ft_memset, ft_memcpy, ft_memmove, and ft_memchr help you manage memory and perform data copying.
-Functions such as ft_bzero and ft_calloc allow you to reset and dynamically allocate memory.
-3. Character Control Functions:
-Functions like ft_isalpha, ft_isdigit, ft_isalnum, ft_isascii, and ft_isprint allow you to identify character types.
-You can use ft_toupper and ft_tolower to convert character cases.
-4. Linked List Functions:
-To manage linked lists of type t_list, libft provides functions such as ft_lstnew, ft_lstadd_front, ft_lstadd_back, ft_lstclear, and ft_lstmap.
-These functions make it easier to manage dynamic data structures.
+# Libft
+
+Libft is a custom implementation of essential standard library functions for the C programming language. This project provides commonly used utility functions for `string`, `memory`, and `linked list` operations, along with additional helper functions. Libft serves as a foundational library for developing more complex C projects.
+
+## Features
+
+- **String Manipulation**: Functions like `ft_strlen`, `ft_strdup`, `ft_strjoin`, and `ft_split` enable efficient text processing.
+- **Memory Management**: Use functions such as `ft_memset`, `ft_memcpy`, `ft_bzero`, and `ft_calloc` for memory operations.
+- **Character Classification**: Functions like `ft_isalpha`, `ft_isdigit`, `ft_tolower`, and `ft_toupper` help handle character-based data.
+- **Linked List Management**: Provides utilities like `ft_lstnew`, `ft_lstadd_back`, and `ft_lstmap` to simplify dynamic data structures.
+
+## Installation
+
+Clone the repository and build the library:
+
+```bash
+git clone https://github.com/username/libft.git
+cd libft
+make
+```
+
+This will generate a static library file `libft.a` that you can link to your C projects.
+
+## Usage
+
+To use Libft in your project, include `libft.h` and link the `libft.a` file during compilation. For example:
+
+```bash
+gcc main.c -L. -lft -o my_program
+```
+
+Here, `main.c` is your program's main file, `-L.` specifies the directory containing `libft.a`, and `-lft` links the library.
+
+## Example
+
+```c
+#include "libft.h"
+#include <stdio.h>
+
+int main(void) {
+    char *message = ft_strdup("Welcome to Libft!");
+    printf("%s\n", message);
+    free(message);
+
+    int number = 42;
+    char *num_str = ft_itoa(number);
+    printf("Number: %s\n", num_str);
+    free(num_str);
+
+    return 0;
+}
+```
+
+## Contributing
+
+Contributions are welcome! If you encounter any issues or have ideas for improvement, feel free to open an issue or submit a pull request.
