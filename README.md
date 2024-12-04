@@ -1,5 +1,3 @@
-Here’s an English GitHub description for your `libft` project, formatted as a `README.md` file:
-
 ---
 
 # Libft
