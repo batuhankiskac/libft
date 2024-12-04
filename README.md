@@ -1,5 +1,3 @@
----
-
 # Libft
 
 Libft is a custom implementation of essential standard library functions for the C programming language. This project provides commonly used utility functions for `string`, `memory`, and `linked list` operations, along with additional helper functions. Libft serves as a foundational library for developing more complex C projects.
